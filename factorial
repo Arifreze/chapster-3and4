@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class Task3 {
+    public static void main(String[] args) {
+        Scanner hadir= new Scanner(System.in);
+        
+        // input num to get factorial(kene non negartive)
+        System.out.print("Enter num: ");
+        int n = hadir.nextInt();
+        
+        // pastikan input tu sah then calculate
+        if (n < 0) {
+            System.out.println("no negative number");
+        } else {
+            int result = 1; // declare result utkn first factorial
+            
+            // Calc factorial selalu
+            for (int i = 1; i <= n; i++) {
+                result *= i;
+            }
+            
+            // Display result
+            System.out.println(n + "! = " + result);
+        }
+    }
+}
