@@ -1,0 +1,57 @@
+
+import java.util.Scanner;
+public class Task3 {
+    public static void main(String[] args) {
+        Scanner hadir = new Scanner(System.in);
+        int continueOption;
+
+        do {
+            // Declare variables for item 
+            double speakerprice = 100.0;
+            double headphoneprice = 200.0;
+            double earphoneprice = 40.0;
+
+            // Declare variables for salary/commission rate
+            double salary = 600.0;
+            double commissionRate = 0.05; // 5% commission
+
+            // Display item prices
+            System.out.println("Item prices:");
+            System.out.printf("Speaker: RM%.2f%n", speakerprice);
+            System.out.printf("Headphone: RM%.2f%n", headphoneprice);
+            System.out.printf("Earphone: RM%.2f%n", earphoneprice);
+
+            // input sold itedm num
+            System.out.print("Enter the number of speakers sold: ");
+            int speakernum = hadir.nextInt();
+            System.out.print("Enter the number of headphones sold: ");
+            int headphonenum = hadir.nextInt();
+            System.out.print("Enter the number of earphones sold: ");
+            int earphonenum = hadir.nextInt();
+
+            // Calc total
+            double totalsale = (speakernum * speakerprice) +
+                                (headphonenum * headphoneprice) +
+                                (earphonenum * earphoneprice);
+
+            // Calc commission
+            double commission = totalsale * commissionRate;
+
+            // Calculate total earnings including commission
+            double total = salary + commission;
+
+            // Display results
+            System.out.printf("Weekly Salary: RM%.2f%n", salary);
+            System.out.printf("Total Sales: RM%.2f%n", totalsale);
+            System.out.printf("Commission: RM%.2f%n", commission);
+            System.out.printf("Total: RM%.2f%n", total);
+
+            // Ask user if they want to continue
+            System.out.print("Enter 1 to continue or 0 to exit: ");
+            continueOption = hadir.nextInt();
+
+        } while (continueOption == 1);
+
+        System.out.println("Exit.");
+    }
+}
