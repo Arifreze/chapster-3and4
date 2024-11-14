@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class Task3 {
+    public static void main(String[] args) {
+
+ Scanner hadir= new Scanner(System.in);
+        
+        // user input max number for fibonachhi
+        System.out.print("Enter max number ");
+        int maxnum = hadir.nextInt();
+
+        // declare 2 fibonacchi num
+        int a = 0, b = 1;
+
+        // display fibonacchi until max
+        System.out.println("Fibonacci series up to " + maxnum + ":");
+        System.out.print(a + " "); // Print the first Fibonacci number
+
+        // repeat sampai max
+        while (b <= maxnum) {
+            System.out.print(b + " ");
+            int next = a + b; // calc next num
+            a = b;           // update first num
+            b = next;        // Update  sec num
+        }
+
+    }
+}
